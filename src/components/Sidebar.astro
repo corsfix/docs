@@ -1,0 +1,17 @@
+---
+import Default from "@astrojs/starlight/components/Sidebar.astro";
+
+function removeHtmlSuffix(sidebar: any) {
+  return sidebar.map((item: any) => {
+    item.entries = item.entries.map((entry: any) => {
+      entry.href = entry.href.replace(/\.html$/, "");
+      return entry;
+    });
+    return item;
+  });
+}
+
+const modifiedSidebar = removeHtmlSuffix(Astro.locals.starlightRoute.sidebar);
+---
+
+<Default {...Astro.props} sidebar={modifiedSidebar}><slot /></Default>

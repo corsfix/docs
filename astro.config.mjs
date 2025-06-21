@@ -19,7 +19,7 @@ export default defineConfig({
         {
           label: "Overview",
           items: [
-            { label: "Corsfix", link: "/" },
+            { label: "Corsfix", link: "/../docs" },
             { label: "Getting Started", link: "/getting-started" },
             { label: "Free Tier", link: "/free-tier" },
           ],
@@ -78,7 +78,7 @@ export default defineConfig({
       ],
       components: {
         // Head: "./src/components/Head.astro",
-        // Sidebar: "./src/components/Sidebar.astro",
+        Sidebar: "./src/components/Sidebar.astro",
         // SiteTitle: "./src/components/SiteTitle.astro",
         // SocialIcons: "./src/components/SocialIcons.astro",
       },
