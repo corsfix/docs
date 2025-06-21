@@ -1,0 +1,47 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+import Default from "@astrojs/starlight/components/SocialIcons.astro";
+---
+
+<Default {...Astro.props}><slot /></Default>
+<ul>
+  <li>
+    <a href={"/"}>Homepage</a>
+  </li>
+</ul>
+
+<style>
+  div {
+    display: flex;
+    align-items: center;
+    gap: var(--sl-nav-gap);
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: var(--sl-nav-gap);
+  }
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--sl-color-text-accent);
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--sl-color-white);
+  }
+
+  [aria-current="page"],
+  [aria-current="page"]:hover,
+  [aria-current="page"]:focus {
+    font-weight: 600;
+  }
+
+  @media (min-width: 50rem) {
+    a {
+      font-size: var(--sl-text-sm);
+    }
+  }
+</style>
