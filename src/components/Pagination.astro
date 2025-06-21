@@ -1,0 +1,23 @@
+---
+import Default from "@astrojs/starlight/components/Pagination.astro";
+
+const pagination = Astro.locals.starlightRoute.pagination;
+const modifiedPagination = {
+  prev: pagination.prev
+    ? {
+        ...pagination.prev,
+        href: pagination.prev.href.replace(/\.html$/, ""),
+      }
+    : null,
+  next: pagination.next
+    ? {
+        ...pagination.next,
+        href: pagination.next.href.replace(/\.html$/, ""),
+      }
+    : null,
+};
+---
+
+<Default {...Astro.locals.starlightRoute} pagination={modifiedPagination}
+  ><slot /></Default
+>

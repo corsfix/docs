@@ -5,7 +5,6 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
   site: "https://corsfix.com",
-  base: "/docs",
   trailingSlash: "never",
   build: {
     format: "file",
@@ -13,36 +12,36 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Corsfix Docs",
-			routeMiddleware: './src/routeData.ts',
+      routeMiddleware: "./src/routeData.ts",
       disable404Route: true,
       sidebar: [
         {
           label: "Overview",
           items: [
-            { label: "Corsfix", link: "/" },
-            { label: "Getting Started", link: "/getting-started" },
-            { label: "Free Tier", link: "/free-tier" },
+            { label: "Corsfix", link: "/docs/" },
+            { label: "Getting Started", link: "/docs/getting-started" },
+            { label: "Free Tier", link: "/docs/free-tier" },
           ],
         },
         {
           label: "CORS Proxy",
-          autogenerate: { directory: "cors-proxy" },
+          autogenerate: { directory: "docs/cors-proxy" },
         },
         {
           label: "Dashboard",
-          autogenerate: { directory: "dashboard" },
+          autogenerate: { directory: "docs/dashboard" },
         },
         {
           label: "Platform Integration",
-          autogenerate: { directory: "platform" },
+          autogenerate: { directory: "docs/platform" },
         },
         {
           label: "Code Examples",
-          autogenerate: { directory: "code-examples" },
+          autogenerate: { directory: "docs/code-examples" },
         },
         {
           label: "Open Source",
-          autogenerate: { directory: "open-source" },
+          autogenerate: { directory: "docs/open-source" },
         },
       ],
       head: [
@@ -77,6 +76,7 @@ export default defineConfig({
         },
       ],
       components: {
+        Pagination: "./src/components/Pagination.astro",
         Sidebar: "./src/components/Sidebar.astro",
         SocialIcons: "./src/components/SocialIcons.astro",
       },

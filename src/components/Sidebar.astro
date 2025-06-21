@@ -14,4 +14,6 @@ function removeHtmlSuffix(sidebar: any) {
 const modifiedSidebar = removeHtmlSuffix(Astro.locals.starlightRoute.sidebar);
 ---
 
-<Default {...Astro.props} sidebar={modifiedSidebar}><slot /></Default>
+<Default {...Astro.locals.starlightRoute} sidebar={modifiedSidebar}
+  ><slot /></Default
+>

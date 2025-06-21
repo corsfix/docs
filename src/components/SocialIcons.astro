@@ -1,9 +1,8 @@
 ---
-import type { Props } from "@astrojs/starlight/props";
 import Default from "@astrojs/starlight/components/SocialIcons.astro";
 ---
 
-<Default {...Astro.props}><slot /></Default>
+<Default {...Astro.locals.starlightRoute}><slot /></Default>
 <ul>
   <li>
     <a href={"/"}>Homepage</a>

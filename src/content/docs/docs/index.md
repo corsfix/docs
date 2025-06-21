@@ -1,5 +1,5 @@
 ---
-title: Corsfix Docs
+title: Corsfix
 description: Learn about Corsfix and how it can help you bypass CORS errors.
 head:
   - tag: title
