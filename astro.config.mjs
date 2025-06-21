@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,9 +10,19 @@ export default defineConfig({
   build: {
     format: "file",
   },
+  redirects: {
+    "/docs/sponsorship/open-source": "/docs/open-source/sponsorship",
+    "/docs/integration/axios": "/docs/code-examples/axios",
+    "/docs/integration/fetch": "/docs/code-examples/fetch",
+    "/docs/integration/ky": "/docs/code-examples/ky",
+    "/docs/integration/xhr": "/docs/code-examples/xhr",
+  },
   integrations: [
     starlight({
       title: "Corsfix Docs",
+      logo: {
+        src: "/public/logo.png",
+      },
       routeMiddleware: "./src/routeData.ts",
       disable404Route: true,
       sidebar: [
@@ -84,5 +95,6 @@ export default defineConfig({
         themes: ["dark-plus"],
       },
     }),
+    sitemap(),
   ],
 });
