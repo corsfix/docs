@@ -4,6 +4,7 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://corsfix.com",
   base: "/docs",
   trailingSlash: "never",
   build: {
@@ -12,6 +13,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Corsfix Docs",
+			routeMiddleware: './src/routeData.ts',
       disable404Route: true,
       sidebar: [
         {
@@ -74,6 +76,12 @@ export default defineConfig({
           },
         },
       ],
+      components: {
+        // Head: "./src/components/Head.astro",
+        // Sidebar: "./src/components/Sidebar.astro",
+        // SiteTitle: "./src/components/SiteTitle.astro",
+        // SocialIcons: "./src/components/SocialIcons.astro",
+      },
       expressiveCode: {
         themes: ["dark-plus"],
       },
