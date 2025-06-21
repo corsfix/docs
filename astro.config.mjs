@@ -6,16 +6,10 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://corsfix.com",
+  base: "/docs",
   trailingSlash: "never",
   build: {
     format: "file",
-  },
-  redirects: {
-    "/docs/sponsorship/open-source": "/docs/open-source/sponsorship",
-    "/docs/integration/axios": "/docs/code-examples/axios",
-    "/docs/integration/fetch": "/docs/code-examples/fetch",
-    "/docs/integration/ky": "/docs/code-examples/ky",
-    "/docs/integration/xhr": "/docs/code-examples/xhr",
   },
   integrations: [
     starlight({
@@ -29,30 +23,29 @@ export default defineConfig({
         {
           label: "Overview",
           items: [
-            { label: "Corsfix", link: "/docs/" },
-            { label: "Getting Started", link: "/docs/getting-started" },
-            { label: "Free Tier", link: "/docs/free-tier" },
+            { label: "Getting Started", link: "/getting-started" },
+            { label: "Free Tier", link: "/free-tier" },
           ],
         },
         {
           label: "CORS Proxy",
-          autogenerate: { directory: "docs/cors-proxy" },
+          autogenerate: { directory: "cors-proxy" },
         },
         {
           label: "Dashboard",
-          autogenerate: { directory: "docs/dashboard" },
+          autogenerate: { directory: "dashboard" },
         },
         {
           label: "Platform Integration",
-          autogenerate: { directory: "docs/platform" },
+          autogenerate: { directory: "platform" },
         },
         {
           label: "Code Examples",
-          autogenerate: { directory: "docs/code-examples" },
+          autogenerate: { directory: "code-examples" },
         },
         {
           label: "Open Source",
-          autogenerate: { directory: "docs/open-source" },
+          autogenerate: { directory: "open-source" },
         },
       ],
       head: [
