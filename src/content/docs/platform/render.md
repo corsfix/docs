@@ -20,12 +20,12 @@ Save this URL as you'll need it for configuring Corsfix in the next step.
 
 ### 2. Configure Your Application in Corsfix
 
-Navigate to the [Corsfix application dashboard](https://app.corsfix.com) and add your Render deployment URL as an allowed origin for API requests.
+Navigate to the [Corsfix application dashboard](https://app.corsfix.com) and add your Render deployment URL as an origin domain for API requests.
 
-![Adding Render Origin](https://assets.corsfix.com/ak656kxl.png)
-_Add your Render application URL to the Corsfix dashboard_
+![Adding origin domain](https://assets.corsfix.com/8bna8zej.png)
+_Add your origin domain the Corsfix dashboard_
 
-After adding your domain as an allowed origin, your API requests through Corsfix will work correctly in your deployed static site.
+After adding your domain as an origin domain, your API requests through Corsfix will work correctly in your deployed static site.
 
 ### 3. Test Your API Integration
 
@@ -38,4 +38,4 @@ Check your browser's developer tools to confirm that CORS errors are eliminated 
 
 ## Custom Domains
 
-If you've configured a custom domain for your Render static site, make sure to add your custom domain (e.g., `https://yourdomain.com`) to the allowed origins in the Corsfix dashboard instead of the default Render-generated URL.
+If you've configured a custom domain for your Render static site, make sure to add your custom domain (e.g., `https://yourdomain.com`) to the origin domains in the Corsfix dashboard instead of the default Render-generated URL.

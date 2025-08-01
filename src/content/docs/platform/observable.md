@@ -11,7 +11,7 @@ This integration guide explains how to use Corsfix to bypass these restrictions 
 
 When you run code that fetches data directly within an Observable notebook cell (e.g., using `fetch`), the request originates from a unique domain specific to your user account.
 
-To allow Corsfix to proxy requests from your notebook, you must add your specific Observable user domain to the **Allowed Origins** list for your application in the [Corsfix dashboard](/docs/dashboard/application/#adding-a-new-application).
+To allow Corsfix to proxy requests from your notebook, you must add your specific Observable user domain to the **Origin Domains** list for your application in the [Corsfix dashboard](/docs/dashboard/application/#adding-a-new-application).
 
 The format for this origin is:
 `https://<username>.static.observableusercontent.com`
@@ -50,12 +50,12 @@ To resolve CORS errors for these client-side requests:
     fetch("https://proxy.corsfix.com/?https://api.example.com/data");
     ```
 
-2.  **Deployment:** When you deploy your Observable Framework application, it will be hosted on a specific domain. You **must** add this deployment domain to your **Allowed Origins** in the [Corsfix dashboard](/docs/dashboard/application/#adding-a-new-application).
+2.  **Deployment:** When you deploy your Observable Framework application, it will be hosted on a specific domain. You **must** add this deployment domain to your **Origin Domains** in the [Corsfix dashboard](/docs/dashboard/application/#adding-a-new-application).
     - If using Observable's default hosting, the domain is typically:
       `https://<username>.observablehq.cloud` (replace `<username>` with your Observable username).
     - If using a custom domain, add your specific custom domain (e.g., `https://my-data-app.com`).
 
-After configuring the allowed origin for your deployed app, client-side fetch requests using the Corsfix proxy URL will work correctly.
+After configuring the origin domain for your deployed app, client-side fetch requests using the Corsfix proxy URL will work correctly.
 
 ```javascript
 // Example: Client-side fetch within an Observable Framework component

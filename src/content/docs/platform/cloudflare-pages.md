@@ -20,12 +20,12 @@ Make note of this URL as you'll need it to configure Corsfix in the next step.
 
 ### 2. Configure Your Application in Corsfix
 
-Head over to the [Corsfix application dashboard](https://app.corsfix.com) and add your Cloudflare Pages deployment URL as an allowed origin for API requests.
+Head over to the [Corsfix application dashboard](https://app.corsfix.com) and add your Cloudflare Pages deployment URL as an origin domain for API requests.
 
-![Adding Cloudflare Pages Origin](https://assets.corsfix.com/7o0dt15.png)
-_Add your Cloudflare Pages application URL to the Corsfix dashboard_
+![Adding origin domain](https://assets.corsfix.com/8bna8zej.png)
+_Add your origin domain the Corsfix dashboard_
 
-After adding your domain to the allowed origins, your API requests through Corsfix will function properly in your deployed application.
+After adding your domain to the origin domains, your API requests through Corsfix will function properly in your deployed application.
 
 ### 3. Verify Your API Integration
 
@@ -38,4 +38,4 @@ Check your browser's developer console to confirm that CORS errors are eliminate
 
 ## Custom Domains
 
-If you've configured a custom domain for your Cloudflare Pages site, ensure you add your custom domain (e.g., `https://yourdomain.com`) to the allowed origins in the Corsfix dashboard rather than using the default Cloudflare Pages URL.
+If you've configured a custom domain for your Cloudflare Pages site, ensure you add your custom domain (e.g., `https://yourdomain.com`) to the origin domains in the Corsfix dashboard rather than using the default Cloudflare Pages URL.

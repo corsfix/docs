@@ -41,7 +41,7 @@ Create a simple HTML (index.html) file that will be hosted on a web server. This
 </html>
 ```
 
-Host this file on a static website hosting service (like GitHub Pages, Netlify, Vercel, etc.), then add it to your [application allowed origins](/docs/dashboard/application) via the dashboard.
+Host this file on a static website hosting service (like GitHub Pages, Netlify, Vercel, etc.), then add it to your [application origin domains](/docs/dashboard/application) via the dashboard.
 
 You can also work locally when developing your plugin, see the [Development Environment](#development-environment) section for more details.
 

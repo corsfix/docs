@@ -20,12 +20,12 @@ Keep this URL handy as you'll need it for configuring Corsfix in the upcoming st
 
 ### 2. Set Up Your Application in Corsfix
 
-Go to the [Corsfix application dashboard](https://app.corsfix.com) and register your Firebase Hosting deployment URL as an allowed origin for API requests.
+Go to the [Corsfix application dashboard](https://app.corsfix.com) and register your Firebase Hosting deployment URL as an origin domain for API requests.
 
-![Adding Firebase Hosting Origin](https://assets.corsfix.com/r9uwhnn.png)
-_Register your Firebase Hosting application URL in the Corsfix dashboard_
+![Adding origin domain](https://assets.corsfix.com/8bna8zej.png)
+_Add your origin domain the Corsfix dashboard_
 
-Once you've configured your domain as an allowed origin, your API requests through Corsfix will operate correctly in your deployed application.
+Once you've configured your domain as an origin domain, your API requests through Corsfix will operate correctly in your deployed application.
 
 ### 3. Test Your API Integration
 
@@ -38,4 +38,4 @@ Open your browser's developer tools to verify that CORS errors have been resolve
 
 ## Custom Domains
 
-If you've connected a custom domain to your Firebase Hosting project, be sure to add your custom domain (e.g., `https://yourdomain.com`) to the allowed origins in the Corsfix dashboard instead of the default Firebase-generated URL.
+If you've connected a custom domain to your Firebase Hosting project, be sure to add your custom domain (e.g., `https://yourdomain.com`) to the origin domains in the Corsfix dashboard instead of the default Firebase-generated URL.

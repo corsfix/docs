@@ -22,10 +22,10 @@ Copy this URL, you'll need it to configure Corsfix in the following step.
 
 ### 2. Set Up Your Application in Corsfix
 
-Navigate to the [Corsfix application dashboard](https://app.corsfix.com) and register your Vercel deployment URL as an allowed origin for API requests.
+Navigate to the [Corsfix application dashboard](https://app.corsfix.com) and register your Vercel deployment URL as an origin domain for API requests.
 
-![Adding Vercel Origin](https://assets.corsfix.com/d443n0k.png)
-_Register your Vercel application URL in the Corsfix dashboard_
+![Adding origin domain](https://assets.corsfix.com/8bna8zej.png)
+_Add your origin domain the Corsfix dashboard_
 
 Once you've added your domain, you can start calling API from your deployed Vercel application.
 

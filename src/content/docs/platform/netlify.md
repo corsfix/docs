@@ -20,12 +20,12 @@ Save this deployment URL as you'll need it for the next step.
 
 ### 2. Configure Corsfix Dashboard
 
-Open the [Corsfix dashboard](/docs/dashboard/application/) and add your Netlify deployment URL as an allowed origin.
+Open the [Corsfix dashboard](/docs/dashboard/application/) and add your Netlify deployment URL as an origin domain.
 
-![Adding Netlify Origin](https://assets.corsfix.com/nkd8l1g.png)
-_Adding your Netlify deployment URL as an allowed origin_
+![Adding origin domain](https://assets.corsfix.com/8bna8zej.png)
+_Add your origin domain the Corsfix dashboard_
 
-After configuring the allowed origin, your API requests through Corsfix will work successfully in your deployed application.
+After configuring the origin domain, your API requests through Corsfix will work successfully in your deployed application.
 
 ### 3. See Your API Requests Go Through
 
@@ -38,7 +38,7 @@ Check your browser's developer console, you should no longer see CORS-related er
 
 ## Custom Domains
 
-If you're using a custom domain with your Netlify site, make sure to add your custom domain (e.g., `https://yourdomain.com`) to the allowed origins in the Corsfix dashboard instead of the default Netlify URL.
+If you're using a custom domain with your Netlify site, make sure to add your custom domain (e.g., `https://yourdomain.com`) to the origin domains in the Corsfix dashboard instead of the default Netlify URL.
 
 ## Using Secrets for API Keys
 
