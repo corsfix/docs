@@ -2,7 +2,8 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import sitemap from "@astrojs/sitemap";
-import starlightMarkdown from "starlight-markdown";
+
+import starlightContextualMenu from "starlight-contextual-menu";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,7 +21,11 @@ export default defineConfig({
       },
       routeMiddleware: "./src/routeData.ts",
       disable404Route: true,
-      plugins: [starlightMarkdown()],
+      plugins: [
+        starlightContextualMenu({
+          actions: ["chatgpt", "claude"],
+        }),
+      ],
       sidebar: [
         {
           label: "Overview",
