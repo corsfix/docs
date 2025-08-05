@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import sitemap from "@astrojs/sitemap";
+import starlightMarkdown from "starlight-markdown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,6 +20,7 @@ export default defineConfig({
       },
       routeMiddleware: "./src/routeData.ts",
       disable404Route: true,
+      plugins: [starlightMarkdown()],
       sidebar: [
         {
           label: "Overview",
