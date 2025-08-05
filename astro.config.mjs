@@ -23,7 +23,7 @@ export default defineConfig({
       disable404Route: true,
       plugins: [
         starlightContextualMenu({
-          actions: ["chatgpt", "claude"],
+          actions: ["copy", "view", "chatgpt", "claude"],
         }),
       ],
       sidebar: [
