@@ -4,6 +4,8 @@ import starlight from "@astrojs/starlight";
 import sitemap from "@astrojs/sitemap";
 
 import starlightContextualMenu from "starlight-contextual-menu";
+import starlightImageZoom from "starlight-image-zoom";
+import starlightLlmsTxt from "starlight-llms-txt";
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,6 +27,8 @@ export default defineConfig({
         starlightContextualMenu({
           actions: ["copy", "view", "chatgpt", "claude"],
         }),
+        starlightImageZoom(),
+        starlightLlmsTxt(),
       ],
       sidebar: [
         {
