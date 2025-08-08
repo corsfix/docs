@@ -3,14 +3,16 @@ title: API
 description: Corsfix CORS Proxy API documentation.
 ---
 
-Corsfix provides two methods to proxy your requests, giving you flexibility in how you interact with the CORS Proxy.
+Corsfix provides several methods to proxy your requests, giving you flexibility in how you use with the CORS Proxy.
 
-## Method 1: Direct URL Path
+## Method 1: Target URL as Query String
 
-The simplest way to use the proxy is by appending the target URL directly to the path:
+A simple way to use the proxy is by inserting the target URL as query string:
 
-```
+```bash
 https://proxy.corsfix.com/?https://api.example.com/data
+# or
+https://proxy.corsfix.com/?api.example.com/data
 ```
 
 ### Example Usage
@@ -21,18 +23,38 @@ fetch("https://proxy.corsfix.com/?https://api.example.com/data")
   .then((data) => console.log(data));
 ```
 
-## Method 2: URL Parameter
+## Method 2: Target URL in `url` Query Parameter
 
-You can also use the `url` parameter to specify your target:
+You can also use the `url` query parameter to specify your target:
 
-```
+```bash
 https://proxy.corsfix.com/?url=https://api.example.com/data
+# or
+https://proxy.corsfix.com/?url=api.example.com/data
 ```
 
 ### Example Usage
 
 ```javascript
 fetch("https://proxy.corsfix.com/?url=https://api.example.com/data")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+```
+
+## Method 3: Target URL as path
+
+If you prefer the shortest URL possible, you can insert the target URL directly to the path:
+
+```bash
+https://proxy.corsfix.com/https://api.example.com/data
+# or
+https://proxy.corsfix.com/api.example.com/data
+```
+
+### Example Usage
+
+```javascript
+fetch("https://proxy.corsfix.com/https://api.example.com/data")
   .then((response) => response.json())
   .then((data) => console.log(data));
 ```
