@@ -3,7 +3,7 @@ title: Application
 description: Learn more about managing your applications in Corsfix dashboard.
 ---
 
-Once you're ready to use Corsfix with your production application, you'll need to add it in the dashboard. This guide will help you understand how to set up and configure your application.
+Once you're ready to use Corsfix in production, you'll need to add it in the dashboard. This guide will help you understand how to set up and configure your application.
 
 ## Adding a New Application
 
@@ -38,6 +38,7 @@ For example:
 Corsfix validates requests based on the Origin header and target domain, ensuring only legitimate requests are processed.
 
 For enhanced security, both origin and target domains use exact matching. For example, these are considered distinct domains that must be added separately:
+
 - `mywebsite.com`
 - `www.mywebsite.com`
 - `app.mywebsite.com`

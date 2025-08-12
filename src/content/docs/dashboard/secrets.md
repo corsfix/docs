@@ -3,7 +3,7 @@ title: Secrets
 description: Learn more about managing your secrets in Corsfix dashboard.
 ---
 
-Before using secrets variables, you need to add your secrets in the dashboard. This guide will help you understand how to set up and manage your secrets. This feature is available to users on Lite, Plus, and Pro plans.
+Before using secrets variables, you need to add your secrets in the dashboard. This guide will help you understand how to set up and manage your secrets.
 
 ## Adding a Secret
 

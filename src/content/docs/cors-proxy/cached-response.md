@@ -3,7 +3,7 @@ title: Cached Response
 description: Learn how you can utilize the cached response for your CORS proxy request.
 ---
 
-The cached response feature enables you to cache and reuse responses from the target server, optimizing performance and reducing throughput usage. This feature is available for users with Lite, Plus, and Pro subscription plans.
+The cached response feature enables you to cache and reuse responses from the target server, optimizing performance and reducing throughput usage.
 
 ## Using x-corsfix-cache
 
@@ -31,6 +31,5 @@ For cached responses, we modify the response headers:
 
 - Set `Cache-Control` to `public`.
 - Remove `Expiration` header.
-- Remove `Set-Cookie` header.
 
 This feature is only available for GET requests, with cache TTL fixed at 1 hour.

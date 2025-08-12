@@ -4,7 +4,6 @@ description: Use secrets variable to store sensitive information when using Cors
 ---
 
 The secrets variable feature allows you to store sensitive information, such as API keys or tokens. This is especially useful when you need to make requests that require credentials without exposing them in your frontend code.
-This feature is available to users on Lite, Plus, and Pro plans.
 
 ## Adding Your Secrets
 

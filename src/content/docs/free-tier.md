@@ -1,24 +1,29 @@
 ---
 title: Free Tier
-description: Learn how you can use Corsfix for free in your local development environment.
+description: Learn how you can try Corsfix for free to quickly integrate your website.
 ---
 
-Corsfix offers a free tier that allows developers to get started immediately using the CORS proxy in their local development environment.
+Our free tier is designed you so you can quickly use Corsfix with your website.
 
-## What's Included
+## Development
 
-- Immediate access to CORS proxy
-- Support for all local development origins:
-  - `localhost`
-  - `127.0.0.1`
-  - `192.168.x.x`
-  - `0.0.0.0`
+Instantly use the proxy in your local development environment (localhost).
+
+- No registration required
+- Unlimited requests
+- Use in local domains (`localhost`, `127.0.0.1`, `192.168.x.x`, `0.0.0.0`)
 - 60 requests per minute
 
-## Moving to Production
+## Production
 
-When you're ready to deploy your application to production:
+Add your website in the [dashboard](/docs/dashboard/application) for production use.
 
-1. Check our [pricing plans](/pricing) for options
-2. Choose a plan that fits your needs
-3. Follow our [dashboard guide](/docs/dashboard/application) to add your application
+Free tier:
+
+- 500 requests per month
+- 50 MB data transfer
+- 60 requests per minute
+- Up to 3 applications
+- 1 secret variable
+
+Upgrade to paid plans for unlimited requests and added features.

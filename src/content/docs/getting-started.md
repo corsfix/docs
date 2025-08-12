@@ -9,25 +9,28 @@ To use Corsfix, add `https://proxy.corsfix.com/?` before your URL when making fe
 
 ```javascript
 // Instead of:
-fetch('https://api.example.com/data')
+fetch("https://api.example.com/data");
 
 // Use:
-fetch('https://proxy.corsfix.com/?https://api.example.com/data')
+fetch("https://proxy.corsfix.com/?https://api.example.com/data");
 ```
 
+Make sure you have added your website in the [dashboard](/docs/dashboard/application) to use in production.
+
 ## Example
+
 ```javascript
 // GET request
-fetch('https://proxy.corsfix.com/?https://api.example.com/users')
-  .then(response => response.json())
-  .then(data => console.log(data));
+fetch("https://proxy.corsfix.com/?https://api.example.com/users")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 
 // POST request
-fetch('https://proxy.corsfix.com/?https://api.example.com/users', {
-  method: 'POST',
-  body: JSON.stringify({ name: 'John' }),
+fetch("https://proxy.corsfix.com/?https://api.example.com/users", {
+  method: "POST",
+  body: JSON.stringify({ name: "John" }),
   headers: {
-    'Content-Type': 'application/json'
-  }
+    "Content-Type": "application/json",
+  },
 });
 ```
