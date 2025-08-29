@@ -9,11 +9,11 @@ Depending on your Corsfix plan, you have access to different quotas and allowanc
 
 Each plan is designed with different throughput capacities to accommodate various usage scenarios. Throughput is measured in requests per minute (RPM) and per IP address.
 
-| Plan | RPM (per IP) |
-| ---- | ------------ |
-| Lite | 60 RPM       |
-| Plus | 120 RPM      |
-| Pro  | 180 RPM      |
+| Plan   | RPM (per IP) |
+| ------ | ------------ |
+| Hobby  | 60 RPM       |
+| Growth | 120 RPM      |
+| Scale  | 180 RPM      |
 
 When exceeding the throughput capacity, users will receive a `429 Too Many Requests` response, which indicates that they have reached the maximum number of requests allowed for their IP address.
 
@@ -30,11 +30,11 @@ Each response includes headers that provide information about the status:
 
 Each plan includes a specific monthly data transfer allowance for outbound traffic. Data transfer refers to the amount of data sent from Corsfix servers to your users.
 
-| Plan | Monthly Data Transfer |
-| ---- | --------------------- |
-| Lite | 25 GB                 |
-| Plus | 100 GB                |
-| Pro  | 500 GB                |
+| Plan   | Monthly Data Transfer |
+| ------ | --------------------- |
+| Hobby  | 25 GB                 |
+| Growth | 100 GB                |
+| Scale  | 500 GB                |
 
 **Important Notes:**
 
