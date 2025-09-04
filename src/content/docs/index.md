@@ -4,9 +4,10 @@ description: Learn about Corsfix and how it can help you bypass CORS errors.
 head:
   - tag: title
     content: Corsfix Docs
+next:
+  link: /docs/getting-started
+  label: Getting Started
 ---
-
-import { LinkButton } from "@astrojs/starlight/components";
 
 Welcome to the Corsfix documentation!
 
@@ -25,5 +26,3 @@ Corsfix is a CORS proxy service that lets you bypass CORS error. It works by fet
 ## Next Steps
 
 Make your first CORS proxy request and learn how to use Corsfix.
-
-<LinkButton href="/docs/getting-started">Getting started</LinkButton>

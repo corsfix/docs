@@ -1,6 +1,9 @@
 ---
 title: Getting Started
 description: Get started with using Corsfix CORS proxy to bypass CORS errors.
+prev:
+  link: /docs
+  label: Corsfix Docs
 ---
 
 To use Corsfix, add `https://proxy.corsfix.com/?` before your URL when making fetch requests.
