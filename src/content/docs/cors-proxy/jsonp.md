@@ -16,7 +16,7 @@ JSONP works by using a `<script>` tag that loads JavaScript from the proxy serve
 
 To use JSONP, you import the Corsfix proxy as a script tag with a callback parameter, and it will execute your callback function with the response data.
 
-### Complete HTML Example
+### HTML Example
 
 Here's a complete HTML example showing how to use JSONP:
 
