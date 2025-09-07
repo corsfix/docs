@@ -1,28 +1,63 @@
 ---
 title: Fetch
-description: Learn how to use Corsfix as a proxy to bypass CORS errors in Fetch requests.
+description: Fix CORS errors in your Fetch requests using Corsfix CORS proxy.
 ---
 
-This page shows how to use Corsfix as a proxy to bypass CORS errors in Fetch requests.
+Use these code examples for bypassing CORS errors in Fetch requests with Corsfix CORS proxy.
+
+## GET Request
 
 ```javascript
-// basic usage
-fetch("https://proxy.corsfix.com/?<TARGET_URL>");
+fetch("https://proxy.corsfix.com/?https://api.example.com/data");
+```
 
-// with headers override
-fetch("https://proxy.corsfix.com/?<TARGET_URL>", {
-  headers: {
-    "x-corsfix-headers": JSON.stringify({
-      Origin: "https://www.google.com",
-      Referer: "https://www.google.com",
-    }),
-  },
-});
+## Cached Response
 
-// with cached response
-fetch("https://proxy.corsfix.com/?<TARGET_URL>", {
+```js
+fetch("https://proxy.corsfix.com/?https://api.example.com/data", {
   headers: {
     "x-corsfix-cache": "true",
+  },
+});
+```
+
+## POST Request
+
+```js
+fetch("https://proxy.corsfix.com/?https://api.example.com/data", {
+  method: "POST",
+  body: JSON.stringify({
+    data: "mydata",
+  }),
+});
+```
+
+## Using Secrets
+
+```js
+fetch(
+  "https://proxy.corsfix.com/?" +
+    "https://api.example.com/data?key={{SECRET_KEY}}",
+  {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer {{SECRET_TOKEN}}",
+    },
+    body: JSON.stringify({
+      data: "mydata",
+    }),
+  }
+);
+```
+
+## Header Override
+
+```js
+fetch("https://proxy.corsfix.com/?https://api.example.com/data", {
+  headers: {
+    "x-corsfix-headers": JSON.stringify({
+      "User-Agent": "MyAgent/1.0",
+    }),
   },
 });
 ```

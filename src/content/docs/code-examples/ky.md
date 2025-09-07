@@ -1,28 +1,62 @@
 ---
 title: Ky
-description: Learn how to use Corsfix as a proxy to bypass CORS errors in Ky requests.
+description: Fix CORS errors in your Ky requests using Corsfix CORS proxy.
 ---
 
-This page shows how to use Corsfix as a proxy to bypass CORS errors in Ky requests.
+Use these code examples for bypassing CORS errors in Ky requests with Corsfix CORS proxy.
+
+## GET Request
 
 ```javascript
-// basic usage
-ky.get("https://proxy.corsfix.com/?<TARGET_URL>");
+ky.get("https://proxy.corsfix.com/?https://api.example.com/data");
+```
 
-// with headers override
-ky.get("https://proxy.corsfix.com/?<TARGET_URL>", {
-  headers: {
-    "x-corsfix-headers": JSON.stringify({
-      Origin: "https://www.google.com",
-      Referer: "https://www.google.com",
-    }),
-  },
-});
+## Cached Response
 
-// with cached response
-ky.get("https://proxy.corsfix.com/?<TARGET_URL>", {
+```js
+ky.get("https://proxy.corsfix.com/?https://api.example.com/data", {
   headers: {
     "x-corsfix-cache": "true",
+  },
+});
+```
+
+## POST Request
+
+```js
+ky.post("https://proxy.corsfix.com/?https://api.example.com/data", {
+  body: JSON.stringify({
+    data: "mydata",
+  }),
+});
+```
+
+## Using Secrets
+
+```js
+ky.post(
+  "https://proxy.corsfix.com/?" +
+    "https://api.example.com/data?key={{SECRET_KEY}}",
+  {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer {{SECRET_TOKEN}}",
+    },
+    body: JSON.stringify({
+      data: "mydata",
+    }),
+  }
+);
+```
+
+## Header Override
+
+```js
+ky.get("https://proxy.corsfix.com/?https://api.example.com/data", {
+  headers: {
+    "x-corsfix-headers": JSON.stringify({
+      "User-Agent": "MyAgent/1.0",
+    }),
   },
 });
 ```

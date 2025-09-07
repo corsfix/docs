@@ -1,28 +1,62 @@
 ---
 title: Axios
-description: Learn how to use Corsfix as a proxy to bypass CORS errors in Axios requests.
+description: Fix CORS errors in your Axios requests using Corsfix CORS proxy.
 ---
 
-This page shows how to use Corsfix as a proxy to bypass CORS errors in Axios requests.
+Use these code examples for bypassing CORS errors in Axios requests with Corsfix CORS proxy.
+
+## GET Request
 
 ```javascript
-// basic usage
-axios.get("https://proxy.corsfix.com/?<TARGET_URL>");
+axios.get("https://proxy.corsfix.com/?https://api.example.com/data");
+```
 
-// with headers override
-axios.get("https://proxy.corsfix.com/?<TARGET_URL>", {
-  headers: {
-    "x-corsfix-headers": JSON.stringify({
-      Origin: "https://www.google.com",
-      Referer: "https://www.google.com",
-    }),
-  },
-});
+## Cached Response
 
-// with cached response
-axios.get("https://proxy.corsfix.com/?<TARGET_URL>", {
+```js
+axios.get("https://proxy.corsfix.com/?https://api.example.com/data", {
   headers: {
     "x-corsfix-cache": "true",
+  },
+});
+```
+
+## POST Request
+
+```js
+axios.post("https://proxy.corsfix.com/?https://api.example.com/data", {
+  body: JSON.stringify({
+    data: "mydata",
+  }),
+});
+```
+
+## Using Secrets
+
+```js
+axios.post(
+  "https://proxy.corsfix.com/?" +
+    "https://api.example.com/data?key={{SECRET_KEY}}",
+  {
+    method: "POST",
+    headers: {
+      Authorization: "Bearer {{SECRET_TOKEN}}",
+    },
+    body: JSON.stringify({
+      data: "mydata",
+    }),
+  }
+);
+```
+
+## Header Override
+
+```js
+axios.get("https://proxy.corsfix.com/?https://api.example.com/data", {
+  headers: {
+    "x-corsfix-headers": JSON.stringify({
+      "User-Agent": "MyAgent/1.0",
+    }),
   },
 });
 ```
