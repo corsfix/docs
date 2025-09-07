@@ -1,13 +1,13 @@
 ---
 title: Cloudflare Pages
-description: Use Corsfix in your Cloudflare Pages applications to make API requests without CORS errors.
+description: Fix CORS errors in Cloudflare Pages with Corsfix when calling external APIs from your website.
 ---
 
 Cloudflare Pages is a JAMstack platform for frontend developers to collaborate and deploy websites. When building static sites or single-page applications on Cloudflare Pages, you might encounter CORS errors when trying to access external APIs directly from your frontend code.
 
-This happens because many APIs are designed to only accept requests from server environments, not directly from browser-based applications. Corsfix solves this problem by providing a secure proxy service that enables your Cloudflare Pages application to communicate with any API without CORS restrictions.
+In this guide, we'll fix CORS errors in Cloudflare Pages using Corsfix, a secure proxy service that enables your application to communicate with any API without CORS restrictions.
 
-## Getting Started
+## Fix CORS error
 
 ### 1. Deploy Your Project to Cloudflare Pages
 

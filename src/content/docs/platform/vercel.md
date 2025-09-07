@@ -1,13 +1,13 @@
 ---
 title: Vercel
-description: Use Corsfix in your Vercel-hosted applications to make API requests without CORS errors.
+description: Fix CORS errors in Vercel with Corsfix when calling external APIs from your website.
 ---
 
 Vercel offers a powerful cloud platform for deploying and hosting modern web applications.
 
 If you're hosting a static application on Vercel, you may run into CORS errors when attempting to call external APIs directly from your application. This happens because many APIs are configured to only accept requests from server environments.
 
-Corsfix eliminates these errors by providing a secure proxy service that allows your Vercel-hosted frontend to communicate with any API.
+In this guide, we'll fix CORS errors in Vercel using Corsfix, a secure proxy service that enables your application to communicate with any API without CORS restrictions.
 
 ## Getting Started
 

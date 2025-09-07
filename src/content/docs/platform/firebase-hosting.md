@@ -1,13 +1,13 @@
 ---
 title: Firebase Hosting
-description: Use Corsfix in your Firebase Hosting applications to make API requests without CORS errors.
+description: Fix CORS errors in Firebase Hosting with Corsfix when calling external APIs from your website.
 ---
 
 Firebase Hosting is Google's web hosting platform for static sites and progressive web apps. When calling external APIs directly from your Firebase-hosted application, you may encounter CORS errors since many APIs only accept requests from server environments.
 
-Corsfix eliminates these errors by providing a secure proxy service that allows your Firebase Hosting application to communicate with any API without CORS restrictions.
+In this guide, we'll fix CORS errors in Firebase Hosting using Corsfix, a secure proxy service that enables your application to communicate with any API without CORS restrictions.
 
-## Getting Started
+## Fix CORS error
 
 ### 1. Deploy Your Application to Firebase Hosting
 

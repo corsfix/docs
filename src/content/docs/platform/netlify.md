@@ -1,13 +1,13 @@
 ---
 title: Netlify
-description: Use Corsfix in your Netlify-hosted applications to make API requests without CORS errors.
+description: Fix CORS errors in Netlify with Corsfix when calling external APIs from your website.
 ---
 
-Netlify is a popular web deployment service where you can host your static websites and single-page applications. It's not uncommon to encounter CORS errors when working with Netlify since you're typically working with static-only apps, and most APIs require requests to be made from a backend server.
+Netlify is a popular web deployment service where you can host your static websites and single-page applications. It's comon to encounter CORS errors when working with Netlify since you're typically working with static-only apps, and most APIs require requests to be made from a backend server.
 
-With Corsfix's CORS proxy, you can fetch data directly from your frontend and do so securely using our [secrets variable](/docs/cors-proxy/secrets-variable) feature.
+In this guide, we'll fix CORS errors in Netlify using Corsfix, a secure proxy service that enables your application to communicate with any API without CORS restrictions.
 
-## Getting Started
+## Fix CORS error
 
 ### 1. Deploy Your Netlify Project
 

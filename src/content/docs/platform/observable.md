@@ -1,11 +1,11 @@
 ---
 title: Observable
-description: Use Corsfix in your Observable notebooks and data apps to make API requests without CORS error.
+description: Fix CORS errors in Observable with Corsfix when calling external APIs.
 ---
 
 Observable notebooks and data apps are powerful tools for data visualization and analysis. However, when making API requests directly from the browser environment within these tools, you may encounter Cross-Origin Resource Sharing (CORS) issues if the target API isn't configured to allow requests from Observable's domains.
 
-This integration guide explains how to use Corsfix to bypass these restrictions in both Observable notebooks and the Observable Framework.
+In this guide, we'll fix CORS errors in Observable using Corsfix, a secure proxy service that enables your application to communicate with any API without CORS restrictions.
 
 ## Observable Notebook
 

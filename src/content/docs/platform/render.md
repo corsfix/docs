@@ -1,13 +1,13 @@
 ---
 title: Render
-description: Use Corsfix in your Render-hosted static sites to make API requests without CORS errors.
+description: Fix CORS errors in Render with Corsfix when calling external APIs from your website.
 ---
 
 Render is a modern cloud platform for hosting web applications. When building static sites on Render, you may encounter CORS errors when calling external APIs directly from your frontend code since many APIs only accept requests from server environments.
 
-Corsfix eliminates these errors by providing a secure proxy service that allows your Render-hosted static site to communicate with any API without CORS restrictions.
+In this guide, we'll fix CORS errors in Render using Corsfix, a secure proxy service that enables your application to communicate with any API without CORS restrictions.
 
-## Getting Started
+## Fix CORS error
 
 ### 1. Deploy Your Static Site to Render
 
