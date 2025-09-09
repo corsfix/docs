@@ -38,4 +38,4 @@ Check your browser's developer console to confirm that CORS errors are eliminate
 
 ## Custom Domains
 
-If you've configured a custom domain for your Cloudflare Pages site, ensure you add your custom domain (e.g., `https://yourdomain.com`) to the origin domains in the Corsfix dashboard rather than using the default Cloudflare Pages URL.
+If you've configured a custom domain for your Cloudflare Pages site, ensure you add your custom domain (e.g., `yourdomain.com`) to the origin domains in the Corsfix dashboard rather than using the default Cloudflare Pages URL.

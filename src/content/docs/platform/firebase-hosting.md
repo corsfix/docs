@@ -38,4 +38,4 @@ Open your browser's developer tools to verify that CORS errors have been resolve
 
 ## Custom Domains
 
-If you've connected a custom domain to your Firebase Hosting project, be sure to add your custom domain (e.g., `https://yourdomain.com`) to the origin domains in the Corsfix dashboard instead of the default Firebase-generated URL.
+If you've connected a custom domain to your Firebase Hosting project, be sure to add your custom domain (e.g., `yourdomain.com`) to the origin domains in the Corsfix dashboard instead of the default Firebase-generated URL.

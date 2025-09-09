@@ -38,4 +38,4 @@ Check your browser's developer tools to confirm that CORS errors are eliminated 
 
 ## Custom Domains
 
-If you've configured a custom domain for your Render static site, make sure to add your custom domain (e.g., `https://yourdomain.com`) to the origin domains in the Corsfix dashboard instead of the default Render-generated URL.
+If you've configured a custom domain for your Render static site, make sure to add your custom domain (e.g., `yourdomain.com`) to the origin domains in the Corsfix dashboard instead of the default Render-generated URL.

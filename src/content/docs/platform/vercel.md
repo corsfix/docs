@@ -9,7 +9,7 @@ If you're hosting a static application on Vercel, you may run into CORS errors w
 
 In this guide, we'll fix CORS errors in Vercel using Corsfix, a secure proxy service that enables your application to communicate with any API without CORS restrictions.
 
-## Getting Started
+## Fix CORS error
 
 ### 1. Deploy Your Application to Vercel
 
@@ -40,4 +40,4 @@ Open your browser's developer tools to verify that CORS errors are gone and your
 
 ## Custom Domains
 
-When using a custom domain for your Vercel application, remember to register your custom domain URL (such as `https://yourdomain.com`) in the Corsfix dashboard in addition to the default Vercel-generated URL.
+When using a custom domain for your Vercel application, remember to register your custom domain URL (such as `yourdomain.com`) in the Corsfix dashboard in addition to the default Vercel-generated URL.
