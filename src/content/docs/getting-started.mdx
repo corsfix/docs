@@ -5,20 +5,28 @@ prev:
   link: /docs
   label: Corsfix Docs
 ---
+import { Aside } from '@astrojs/starlight/components';
 
 To use Corsfix, add `https://proxy.corsfix.com/?` before your URL when making fetch requests.
 
 ## Basic Usage
 
 ```javascript
-// Instead of:
+// Instead of direct fetch
 fetch("https://api.example.com/data");
 
-// Use:
+/*
+  Add Corsfix URL before the API
+  https://proxy.corsfix.com/? + https://api.example.com/data
+*/
 fetch("https://proxy.corsfix.com/?https://api.example.com/data");
 ```
 
-Make sure you have added your website in the [dashboard](/docs/dashboard/application) to use in production.
+<Aside>
+Make sure to add your domain in the [dashboard](/docs/dashboard/application) to use Corsfix on live websites.
+
+For local websites (localhost), you can use Corsfix without registration.
+</Aside>
 
 ## Example
 

@@ -12,18 +12,17 @@ To add a secret, you'll need to configure three values:
 
 - **Secret Name**: Must be unique and can only contain alphanumeric characters and underscores
 - **Secret Value**: Can be any string (API keys, tokens, etc.)
-- **Notes** (optional): Helpful descriptions to remember what each secret is for
 
 Once you add your secret, you won't be able to see the complete value again for security reasons, so make sure to store it somewhere safe if needed.
 
 ## Updating a Secret
 
-You have the option to update your secret's name, value, and notes after you add it.
+You have the option to update your secret's name and value after you add it.
 You can:
 
 - Leave the secret value empty if you want to keep the existing value
 - Input a new value to update the secret
-- Update the name or notes when needed
+- Update the name when needed
 
 ## Keeping Your Secrets Safe
 

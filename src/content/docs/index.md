@@ -1,6 +1,6 @@
 ---
-title: Corsfix Docs
-description: Learn about Corsfix and how it can help you bypass CORS errors.
+title: Corsfix Documentation
+description: Learn about Corsfix and how it can help you solve CORS errors.
 head:
   - tag: title
     content: Corsfix Docs
@@ -11,17 +11,20 @@ next:
 
 Welcome to the Corsfix documentation!
 
-## What is Corsfix?
-
-Corsfix is a CORS proxy service that lets you bypass CORS error. It works by fetching the target URL on your behalf, and returns it to you with the proper CORS headers.
+Corsfix is a CORS proxy service that lets you solve CORS error. It works by fetching the target API on your behalf, and returns it to you with the proper CORS headers.
 
 ## Key Features
 
-- Setup in less than a minute
-- All HTTP methods and data types supported
-- Override request headers
-- Cached responses
-- Secret variables (use API keys and access tokens)
+- Setup in less than one minute
+- Fetch with any HTTP methods and data types
+- Send any request headers, without restrictions
+- Use API keys securely with Secrets
+- Cache API responses
+- and more.
+
+## Works Anywhere
+
+Corsfix works on any platform and any tech framework out there. You can find your specific use case in our [code examples](/docs/code-examples/overview) and [platform integration](/docs/platform/overview).
 
 ## Next Steps
 

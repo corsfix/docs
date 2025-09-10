@@ -21,7 +21,7 @@ Under normal circumstances, you only need to call the main proxy server at `http
 
 ## Using Region-Specific Endpoints
 
-In case you need to bypass geofenced content or ensure requests originate from a specific region, you can directly call specific proxy server regions:
+In case you need to ensure requests originate from a specific region, you can directly call specific proxy server regions:
 
 ```
 https://proxy-ap.corsfix.com/?<TARGET_URL>  // Asia Pacific

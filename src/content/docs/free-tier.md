@@ -14,11 +14,11 @@ Instantly use the proxy in your local development environment (localhost).
 - Use in local domains (`localhost`, `127.0.0.1`, `192.168.x.x`, `0.0.0.0`)
 - 60 requests per minute
 
-## Production
+## Production (Trial)
 
 Add your website in the [dashboard](/docs/dashboard/application) for production use.
 
-Free tier:
+Free trial:
 
 - 500 requests per month
 - 50 MB data transfer
