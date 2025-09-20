@@ -22,7 +22,7 @@ fetch("https://proxy.corsfix.com/?<TARGET_URL>", {
 });
 ```
 
-## Overridable Forbidden Headers
+## Forbidden Headers
 
 The following normally forbidden headers can be modified using `x-corsfix-headers`:
 

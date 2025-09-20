@@ -7,6 +7,11 @@ prev:
 ---
 import { Aside } from '@astrojs/starlight/components';
 
+<Aside>
+Make sure to add your domain in the [dashboard](/docs/dashboard/application) to use Corsfix on live websites. <br/>
+For local websites (localhost), you can use Corsfix without any setup.
+</Aside>
+
 To use Corsfix, add `https://proxy.corsfix.com/?` before your URL when making fetch requests.
 
 ## Basic Usage
@@ -21,12 +26,6 @@ fetch("https://api.example.com/data");
 */
 fetch("https://proxy.corsfix.com/?https://api.example.com/data");
 ```
-
-<Aside>
-Make sure to add your domain in the [dashboard](/docs/dashboard/application) to use Corsfix on live websites.
-
-For local websites (localhost), you can use Corsfix without registration.
-</Aside>
 
 ## Example
 

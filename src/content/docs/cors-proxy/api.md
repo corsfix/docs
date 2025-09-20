@@ -5,7 +5,7 @@ description: Corsfix CORS Proxy API documentation.
 
 Corsfix provides several methods to proxy your requests, giving you flexibility in how you use with the CORS Proxy.
 
-## Method 1: Target URL as Query String
+## URL as Query String
 
 A simple way to use the proxy is by inserting the target URL as query string:
 
@@ -23,7 +23,7 @@ fetch("https://proxy.corsfix.com/?https://api.example.com/data")
   .then((data) => console.log(data));
 ```
 
-## Method 2: Target URL in `url` Query Parameter
+## URL in Query Parameter (alternative)
 
 You can also use the `url` query parameter to specify your target:
 
@@ -41,7 +41,7 @@ fetch("https://proxy.corsfix.com/?url=https://api.example.com/data")
   .then((data) => console.log(data));
 ```
 
-## Method 3: Target URL as path
+## URL as Path (alternative)
 
 If you prefer the shortest URL possible, you can insert the target URL directly to the path:
 
