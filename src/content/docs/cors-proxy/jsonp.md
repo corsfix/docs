@@ -1,14 +1,13 @@
 ---
 title: JSONP
 description: Learn how to use Corsfix with JSONP for requests in strict security or constrained environments.
-sidebar:
-  badge: Preview
 ---
 
 JSONP (JSON with Padding) is useful when traditional CORS requests are blocked or unavailable. You will need to use JSONP in these situations:
 
 - **Strict Content Security Policy** - When your application's CSP policy blocks `fetch` or `XMLHttpRequest` but allows script tags
 - **Null origin environments** - When working in sandboxed environments where origin is null
+- **Legacy browser support** - When targeting old browsers that don't support CORS
 
 JSONP works by using a `<script>` tag that loads JavaScript from the proxy server, bypassing CORS restrictions since script tags are not subject to the same-origin policy.
 
