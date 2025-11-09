@@ -99,6 +99,6 @@ The body type is determined by the target API response, and we handle them as fo
 JSONP has inherent limitations due to its script-based nature:
 
 - **HTTP method restriction** - Only GET requests are supported (no POST, PUT, DELETE, etc.)
-- **Response size limit** - Target API responses are limited to 3MB
+- **Response size limit** - Target API responses are limited to 1MB
 - **No caching** - The cached response feature is not supported with JSONP
 - **Header limitations** - Sending custom request headers is not supported
