@@ -181,7 +181,21 @@ For production deployments with a custom domain:
    DOMAIN=yourdomain.com
    ```
 
-### Getting Help
+## Docker Images
+
+The official Corsfix Docker images are available on GitHub Container Registry and Docker Hub:
+
+- **Dashboard App**: [GitHub Container Registry](https://ghcr.io/corsfix/corsfix-app) | [Docker Hub](https://hub.docker.com/r/corsfix/corsfix-app)
+- **Proxy Service**: [GitHub Container Registry](https://ghcr.io/corsfix/corsfix-proxy) | [Docker Hub](https://hub.docker.com/r/corsfix/corsfix-proxy)
+
+You can pull the images directly:
+
+```bash
+docker pull ghcr.io/corsfix/app:latest
+docker pull ghcr.io/corsfix/proxy:latest
+```
+
+## Getting Help
 
 For additional support and community discussion, join our Discord server at: https://discord.gg/WEAeqrRjp2
 
