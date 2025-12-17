@@ -1,6 +1,6 @@
 ---
 title: Free Tier
-description: Learn how you can try Corsfix for free to quickly integrate your website.
+description: Learn how you can use Corsfix for free to quickly fix CORS errors in your website.
 ---
 
 Our free offerings are designed you so you can quickly use Corsfix with your website.
@@ -10,7 +10,7 @@ Our free offerings are designed you so you can quickly use Corsfix with your web
 You can instantly use our proxy in your local development environment (localhost).
 
 - No registration required
-- Use in local domains (`localhost`, `127.0.0.1`, `192.168.x.x`, `0.0.0.0`)
+- Use in local domains (`localhost`, `127.0.0.1`, `192.168.x.x`, `0.0.0.0`, etc)
 - 60 requests per minute
 
 ## Production (Trial)
