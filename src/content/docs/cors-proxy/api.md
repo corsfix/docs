@@ -59,11 +59,13 @@ fetch("https://proxy.corsfix.com/https://api.example.com/data")
   .then((data) => console.log(data));
 ```
 
-## Request Headers
+## Headers
+
+### Request Headers
 
 Corsfix uses the `Origin` header to validate if your application is authorized to use the CORS proxy. This header is automatically set when sending request from the browser, such as when using Fetch, Axios, or etc.
 
-## Response Headers
+### Response Headers
 
 The proxy automatically adds the following CORS header to the responses:
 
@@ -72,10 +74,34 @@ Access-Control-Allow-Origin: <your-request-origin>
 Access-Control-Expose-Headers: *
 ```
 
+## Size
+
+### Request Size
+
+The maximum payload size to be sent with the request is 5MB. If your request exceeds this limit, the proxy will return a `413 Payload Too Large` response. This status code indicates that the request is larger than the allowed size.
+
+### Response Size
+
+We don't have a response size limit. You can download however large content using the proxy.
+
 ## Timeouts
 
 When a request takes longer than 20 seconds to complete, the proxy will return a `504 Gateway Timeout` response. This status code indicates that the server did not receive a timely response from the target server.
 
-## Payload Size
+## API Key
 
-The maximum payload size for a request is 5MB. If your request exceeds this limit, the proxy will return a `413 Payload Too Large` response. This status code indicates that the request is larger than the allowed size.
+By default, you don't need to use an API key. The proxy automatically detects requests from your domain if you've added it in the dashboard.
+
+However, if for some reason you can't use domain whitelisting, you can use the API key instead.
+
+```javascript
+fetch("https://proxy.corsfix.com/?https://api.example.com/data", {
+  headers: {
+    "x-corsfix-key": "cfx_12345678",
+  },
+});
+```
+
+You can get your API key from the dashboard. To use it, pass it to the `x-corsfix-key` header.
+
+Note that using an API key on the client side exposes it publicly. Only use this method if domain whitelisting isn't an option.

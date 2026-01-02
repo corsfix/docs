@@ -44,5 +44,3 @@ For enhanced security, both origin and target domains use exact matching. For ex
 - `app.mywebsite.com`
 
 To accommodate this, we support adding multiple origin domains for each application.
-
-We don't use API keys since they would be exposed in client-side code, compromising security.
