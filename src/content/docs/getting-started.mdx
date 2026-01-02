@@ -17,13 +17,9 @@ To use Corsfix, add `https://proxy.corsfix.com/?` before your URL when making fe
 ## Basic Usage
 
 ```javascript
-// Instead of direct fetch
-fetch("https://api.example.com/data");
+// Add Corsfix URL before the API
+// https://proxy.corsfix.com/? + https://api.example.com/data
 
-/*
-  Add Corsfix URL before the API
-  https://proxy.corsfix.com/? + https://api.example.com/data
-*/
 fetch("https://proxy.corsfix.com/?https://api.example.com/data");
 ```
 

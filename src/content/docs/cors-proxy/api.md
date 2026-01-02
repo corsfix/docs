@@ -3,7 +3,7 @@ title: API
 description: Corsfix CORS Proxy API documentation.
 ---
 
-Corsfix provides several methods to proxy your requests, giving you flexibility in how you use with the CORS Proxy.
+Corsfix provides several methods to proxy your requests, giving you flexibility in how you use the CORS Proxy.
 
 ## URL as Query String
 
@@ -59,30 +59,20 @@ fetch("https://proxy.corsfix.com/https://api.example.com/data")
   .then((data) => console.log(data));
 ```
 
-## Headers
+## CORS Headers
 
-### Request Headers
+Corsfix will automatically add the following CORS headers to the response, allowing you to fetch the data without CORS errors:
 
-Corsfix uses the `Origin` header to validate if your application is authorized to use the CORS proxy. This header is automatically set when sending request from the browser, such as when using Fetch, Axios, or etc.
+- [Access-Control-Allow-Origin](/cors-headers/access-control-allow-origin): Allows your origin (domain) to access the data.
+- [Access-Control-Expose-Headers](/cors-headers/access-control-expose-headers): Allows you to see all the response headers (value: *).
 
-### Response Headers
+The proxy will also automatically handle preflight requests, so all your requests just work instantly.
 
-The proxy automatically adds the following CORS header to the responses:
+## Size Limit
 
-```
-Access-Control-Allow-Origin: <your-request-origin>
-Access-Control-Expose-Headers: *
-```
+There is no size limit for the response data. You can download content of any size using the proxy.
 
-## Size
-
-### Request Size
-
-The maximum payload size to be sent with the request is 5MB. If your request exceeds this limit, the proxy will return a `413 Payload Too Large` response. This status code indicates that the request is larger than the allowed size.
-
-### Response Size
-
-We don't have a response size limit. You can download however large content using the proxy.
+However, there is a maximum size for data being sent to the proxy (payload size) at 5MB. If your request exceeds this limit, the proxy will return a `413 Payload Too Large` response.
 
 ## Timeouts
 
