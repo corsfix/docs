@@ -27,7 +27,7 @@ $.ajax({
   url: "https://proxy.corsfix.com/?https://api.example.com/data",
   method: "GET",
   headers: {
-    "x-corsfix-cache": "true",
+    "x-corsfix-cache": "15m",
   },
   success: function (response) {
     console.log(response);

@@ -16,7 +16,7 @@ fetch("https://proxy.corsfix.com/?https://api.example.com/data");
 ```js
 fetch("https://proxy.corsfix.com/?https://api.example.com/data", {
   headers: {
-    "x-corsfix-cache": "true",
+    "x-corsfix-cache": "15m",
   },
 });
 ```

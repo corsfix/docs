@@ -16,7 +16,7 @@ ky.get("https://proxy.corsfix.com/?https://api.example.com/data");
 ```js
 ky.get("https://proxy.corsfix.com/?https://api.example.com/data", {
   headers: {
-    "x-corsfix-cache": "true",
+    "x-corsfix-cache": "15m",
   },
 });
 ```

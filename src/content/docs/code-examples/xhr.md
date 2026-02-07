@@ -18,7 +18,7 @@ xhr.send();
 ```js
 const xhr = new XMLHttpRequest();
 xhr.open("GET", "https://proxy.corsfix.com/?<TARGET_URL>", true);
-xhr.setRequestHeader("x-corsfix-cache", "true");
+xhr.setRequestHeader("x-corsfix-cache", "15m");
 xhr.send();
 ```
 

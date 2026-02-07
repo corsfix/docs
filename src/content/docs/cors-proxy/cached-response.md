@@ -28,7 +28,7 @@ The cache duration value supports the following formats:
 | `<number>h` | Duration in hours | `2h` (2 hours) |
 | `<number>d` | Duration in days | `1d` (1 day) |
 
-If no unit is specified (e.g. `10`), the value defaults to seconds. The maximum cache duration is **1 day** (`1d`). Any value exceeding this will be capped at 1 day.
+If no unit is specified (e.g. `10`), the value defaults to seconds. If the value is invalid or not a recognized duration format, it defaults to **1 hour** cache. The maximum cache duration is **1 day** (`1d`). Any value exceeding this will be capped at 1 day.
 
 With this, you can:
 
