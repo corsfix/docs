@@ -3,7 +3,7 @@ title: API
 description: Corsfix CORS Proxy API documentation.
 ---
 
-Corsfix provides several methods to proxy your requests, giving you flexibility in how you use the CORS Proxy.
+Use Corsfix proxy API to solve CORS errors in your requests. Simply add the proxy before your URL to send request using our proxy.
 
 ## URL as Query String
 
@@ -15,15 +15,15 @@ https://proxy.corsfix.com/?https://api.example.com/data
 https://proxy.corsfix.com/?api.example.com/data
 ```
 
-### Example Usage
-
 ```javascript
 fetch("https://proxy.corsfix.com/?https://api.example.com/data")
   .then((response) => response.json())
   .then((data) => console.log(data));
 ```
 
-## URL in Query Parameter (alternative)
+## Alternative URL
+
+### Query Parameter
 
 You can also use the `url` query parameter to specify your target:
 
@@ -33,15 +33,13 @@ https://proxy.corsfix.com/?url=https://api.example.com/data
 https://proxy.corsfix.com/?url=api.example.com/data
 ```
 
-### Example Usage
-
 ```javascript
 fetch("https://proxy.corsfix.com/?url=https://api.example.com/data")
   .then((response) => response.json())
   .then((data) => console.log(data));
 ```
 
-## URL as Path (alternative)
+### Path
 
 If you prefer the shortest URL possible, you can insert the target URL directly to the path:
 
@@ -50,8 +48,6 @@ https://proxy.corsfix.com/https://api.example.com/data
 # or
 https://proxy.corsfix.com/api.example.com/data
 ```
-
-### Example Usage
 
 ```javascript
 fetch("https://proxy.corsfix.com/https://api.example.com/data")
@@ -80,7 +76,7 @@ When a request takes longer than 20 seconds to complete, the proxy will return a
 
 ## API Key
 
-By default, you don't need to use an API key. The proxy automatically detects requests from your domain if you've added it in the dashboard.
+By default, you don't need to use an API key. The proxy automatically detects requests from your domain if you've added it in the [dashboard](https://app.corsfix.com/).
 
 However, if for some reason you can't use domain whitelisting, you can use the API key instead.
 
@@ -95,3 +91,7 @@ fetch("https://proxy.corsfix.com/?https://api.example.com/data", {
 You can get your API key from the dashboard. To use it, pass it to the `x-corsfix-key` header.
 
 Note that using an API key on the client side exposes it publicly. Only use this method if domain whitelisting isn't an option.
+
+## Lite Plan
+
+For users on the Lite plan, the URL for the proxy is `lite.corsfix.com`.

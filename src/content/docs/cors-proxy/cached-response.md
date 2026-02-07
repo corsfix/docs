@@ -7,17 +7,28 @@ The cached response feature enables you to cache and reuse responses from the ta
 
 ## Using x-corsfix-cache
 
-To use cached response, include the `x-corsfix-cache` header in your request.
+To use cached response, include the `x-corsfix-cache` header in your request with a cache duration value.
 
 Example:
 
 ```javascript
 fetch("https://proxy.corsfix.com/?<TARGET_URL>", {
   headers: {
-    "x-corsfix-cache": "true",
+    "x-corsfix-cache": "10m",
   },
 });
 ```
+
+The cache duration value supports the following formats:
+
+| Format | Description | Example |
+| ------ | ----------- | ------- |
+| `<number>s` | Duration in seconds | `10s` (10 seconds) |
+| `<number>m` | Duration in minutes | `10m` (10 minutes) |
+| `<number>h` | Duration in hours | `2h` (2 hours) |
+| `<number>d` | Duration in days | `1d` (1 day) |
+
+If no unit is specified (e.g. `10`), the value defaults to seconds. The maximum cache duration is **1 day** (`1d`). Any value exceeding this will be capped at 1 day.
 
 With this, you can:
 
@@ -32,4 +43,4 @@ For cached responses, we modify the response headers:
 - Set `Cache-Control` to `public`.
 - Remove `Expiration` header.
 
-This feature is only available for GET requests, with cache TTL fixed at 1 hour.
+This feature is only available for GET requests.

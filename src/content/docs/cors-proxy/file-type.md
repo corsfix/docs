@@ -3,39 +3,10 @@ title: File Types
 description: Learn all the file types supported by Corsfix.
 ---
 
-Corsfix doesn't have any limitations on which file types you can fetch. All plans allow you to fetch any type of file. Here are some common file formats you might work with:
+Corsfix doesn't have any limitations on which file types you can fetch.
 
-### Documents
+All standard plans allow you to fetch any type of file, whether that's documents like PDFs and CSVs, images such as PNG, JPEG, or WebP, media files like MP3 and MP4, web assets like JavaScript, CSS, and JSON, or even archives like ZIP and TAR.
 
-- PDF (.pdf)
-- Word Documents (.doc, .docx)
-- Text Files (.txt)
-- CSV (.csv)
-- XML (.xml)
+## Lite Plan
 
-### Images
-
-- JPEG/JPG (.jpg, .jpeg)
-- PNG (.png)
-- GIF (.gif)
-- WebP (.webp)
-- SVG (.svg)
-
-### Media
-
-- Audio Files (.mp3, .wav, .ogg)
-- Video Files (.mp4, .webm)
-
-### Web Assets
-
-- JavaScript (.js)
-- CSS (.css)
-- HTML (.html)
-- JSON (.json)
-- WebAssembly (.wasm)
-
-### Archives
-
-- ZIP (.zip)
-- TAR (.tar)
-- GZ (.gz)
+The Lite plan is limited to text-based content. This includes formats like JSON, HTML, CSS, XML, CSV, plain text, and other text-based responses. Binary files such as images, videos, audio, PDFs, and archives are not supported on this plan.

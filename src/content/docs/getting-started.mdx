@@ -5,16 +5,17 @@ prev:
   link: /docs
   label: Corsfix Docs
 ---
-import { Aside } from '@astrojs/starlight/components';
+
+import { Aside } from "@astrojs/starlight/components";
 
 <Aside>
-Make sure to add your domain in the [dashboard](https://app.corsfix.com/applications) to use Corsfix on live websites. <br/>
-For local websites (localhost), you can use Corsfix without any setup.
+  Make sure to add your domain in the
+  [dashboard](https://app.corsfix.com/applications) to use Corsfix on live
+  websites. <br />
+  For local websites (localhost), you can use Corsfix without any setup.
 </Aside>
 
 To use Corsfix, add `https://proxy.corsfix.com/?` before your URL when making fetch requests.
-
-## Basic Usage
 
 ```javascript
 // Add Corsfix URL before the API
@@ -23,7 +24,7 @@ To use Corsfix, add `https://proxy.corsfix.com/?` before your URL when making fe
 fetch("https://proxy.corsfix.com/?https://api.example.com/data");
 ```
 
-## Example
+## Basic Usage
 
 ```javascript
 // GET request
@@ -40,3 +41,17 @@ fetch("https://proxy.corsfix.com/?https://api.example.com/users", {
   },
 });
 ```
+
+## API Key
+
+You should use the domain whitelist via the [dashboard](https://app.corsfix.com/). If that's not possible for your use case, you can fall back to using an API key.
+
+```javascript
+fetch("https://proxy.corsfix.com/?https://api.example.com/data", {
+  headers: {
+    "x-corsfix-key": "cfx_12345678",
+  },
+});
+```
+
+We discourage using API key on the client side, as it can be exposed in your source code and browser network requests.

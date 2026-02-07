@@ -36,6 +36,6 @@ Security of your secrets is a shared responsibility between Corsfix and you as a
 
 **What you should do:**
 
-- Specify allowed domains for your application instead of using wildcard domains (`*`), in order to prevent your secrets from being exposed to unauthorized domains
+- Specify allowed domains for your application instead of using `All domains` target, in order to prevent your secrets from being exposed to unauthorized domains
 
 When you make a request with a secrets variable, Corsfix will replace the variable with the actual value of your secret before proxying the request to the target URL. If you configure an application with all domains allowed, a warning will appear in the dashboard to remind you of the potential security implications.

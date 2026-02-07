@@ -41,3 +41,13 @@ Each plan includes a specific monthly data transfer allowance for outbound traff
 - Data transfer quotas apply only to outbound traffic (data sent from Corsfix to your users)
 - Inbound data transfer (requests sent to Corsfix) is always free and unlimited
 - You can monitor your current usage and remaining quota on the Metrics page of your dashboard
+
+## Lite Plan
+
+The Lite plan offers unlimited requests and data transfer at `lite.corsfix.com`, with a rate limit of 600 RPM. Unlike standard plans where each visitor gets their own RPM allowance, the Lite plan shares the 600 RPM pool across all visitors to your site. Content is limited to text-based responses (JSON, HTML, CSV, etc.) with a maximum size of 1 MB per response.
+
+| Feature       | Details                           |
+| ------------- | --------------------------------- |
+| RPM           | 600 RPM (shared across visitors)  |
+| Data Transfer | Unlimited                         |
+| Max File Size | 1 MB                              |
