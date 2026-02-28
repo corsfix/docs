@@ -68,8 +68,9 @@ REDIS_PASSWORD=your_secure_redis_password
 KEK_VERSION_1=your_32_char_base64_key
 AUTH_SECRET=your_32_char_base64_key
 
-# Your domain (use localhost for local development)
-DOMAIN=yourdomain.com
+# Your app and proxy domain (use localhost for local development)
+APP_DOMAIN=app.yourdomain.com
+PROXY_DOMAIN=proxy.yourdomain.com
 ```
 
 Generate secure encryption keys:
@@ -178,7 +179,8 @@ For production deployments with a custom domain:
 
 3. Update your `.env` file with your domain:
    ```bash
-   DOMAIN=yourdomain.com
+   APP_DOMAIN=app.yourdomain.com
+   PROXY_DOMAIN=proxy.yourdomain.com
    ```
 
 ## Docker Images
