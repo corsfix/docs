@@ -70,6 +70,14 @@ export default defineConfig({
         },
         {
           tag: "script",
+          attrs: {
+            src: "https://rybbit.corsfix.com/api/script.js",
+            "data-site-id": "2aa152cf1682",
+            defer: true,
+          },
+        },
+        {
+          tag: "script",
           content: `(function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
