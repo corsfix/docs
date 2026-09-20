@@ -1,6 +1,8 @@
 ---
 title: API
 description: Corsfix CORS Proxy API documentation.
+sidebar:
+  order: 1
 ---
 
 Use Corsfix proxy API to solve CORS errors in your requests. Simply add the proxy before your URL to send request using our proxy.

@@ -1,6 +1,8 @@
 ---
 title: Header Override
 description: Learn about the Corsfix request headers override feature.
+sidebar:
+  order: 5
 ---
 
 The `x-corsfix-headers` request header allows you to override HTTP request headers when making requests through the CORS proxy. This is particularly useful when you need to modify headers that are normally restricted in client-side JavaScript.
@@ -18,6 +20,19 @@ fetch("https://proxy.corsfix.com/?<TARGET_URL>", {
       Origin: "https://www.google.com",
       Referer: "https://www.google.com",
     }),
+  },
+});
+```
+
+Or with the [SDK](/docs/cors-proxy/sdk), pass a plain object in the `headers` option and it is stringified for you:
+
+```js
+corsfix.fetch("<TARGET_URL>", {
+  corsfix: {
+    headers: {
+      Origin: "https://www.google.com",
+      Referer: "https://www.google.com",
+    },
   },
 });
 ```

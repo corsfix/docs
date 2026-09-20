@@ -3,10 +3,15 @@ title: React
 description: Fix CORS errors in your React code using Corsfix CORS proxy.
 ---
 
-Use this code example for bypassing CORS errors in React code with Corsfix CORS proxy.
+Use this code example for bypassing CORS errors in React code with Corsfix CORS proxy. It uses the [Corsfix SDK](/docs/cors-proxy/sdk):
+
+```bash
+npm install corsfix
+```
 
 ```jsx
 import { useEffect, useState } from "react";
+import corsfix from "corsfix";
 
 function MyComponent() {
   const [data, setData] = useState(null);
@@ -14,7 +19,8 @@ function MyComponent() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://proxy.corsfix.com/?https://example.com/api")
+    corsfix
+      .fetch("https://example.com/api")
       .then((response) => response.json())
       .then((data) => {
         setData(data);

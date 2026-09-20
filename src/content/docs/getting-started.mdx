@@ -42,6 +42,28 @@ fetch("https://proxy.corsfix.com/?https://api.example.com/users", {
 });
 ```
 
+## SDK
+
+If you would rather not build the proxy URL yourself, the [Corsfix SDK](/docs/cors-proxy/sdk) wraps `fetch` for you. It works the same way from a script tag or from npm.
+
+```html
+<script src="https://unpkg.com/corsfix"></script>
+<script>
+  corsfix
+    .fetch("https://api.example.com/data")
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+</script>
+```
+
+```javascript
+import corsfix from "corsfix";
+
+const response = await corsfix.fetch("https://api.example.com/data");
+```
+
+Using the SDK also lets your live website take advantage of the [free tier](/docs/free-tier).
+
 ## API Key
 
 You should use the domain whitelist via the [dashboard](https://app.corsfix.com/). If that's not possible for your use case, you can fall back to using an API key.

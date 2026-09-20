@@ -1,6 +1,8 @@
 ---
 title: Cached Response
 description: Learn how you can utilize the cached response for your CORS proxy request.
+sidebar:
+  order: 3
 ---
 
 The cached response feature enables you to cache and reuse responses from the target server, optimizing performance and reducing throughput usage.
@@ -16,6 +18,14 @@ fetch("https://proxy.corsfix.com/?<TARGET_URL>", {
   headers: {
     "x-corsfix-cache": "10m",
   },
+});
+```
+
+Or with the [SDK](/docs/cors-proxy/sdk), pass the duration in the `cache` option:
+
+```javascript
+corsfix.fetch("<TARGET_URL>", {
+  corsfix: { cache: "10m" },
 });
 ```
 

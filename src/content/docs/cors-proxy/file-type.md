@@ -1,6 +1,8 @@
 ---
 title: File Types
 description: Learn all the file types supported by Corsfix.
+sidebar:
+  order: 4
 ---
 
 Corsfix doesn't have any limitations on which file types you can fetch.

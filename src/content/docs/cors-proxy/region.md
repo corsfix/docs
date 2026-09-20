@@ -1,6 +1,8 @@
 ---
 title: Region
 description: Corsfix CORS Proxy server regions.
+sidebar:
+  order: 8
 ---
 
 Corsfix proxy servers are distributed across the world. When you make a request to the Corsfix proxy, the request will be directed to the closest server to minimize latency.

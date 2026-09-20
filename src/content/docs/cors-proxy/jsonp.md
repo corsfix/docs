@@ -1,6 +1,8 @@
 ---
 title: JSONP
 description: Learn how to use Corsfix with JSONP for requests in strict security or constrained environments.
+sidebar:
+  order: 6
 ---
 
 JSONP (JSON with Padding) is useful when traditional CORS requests are blocked or unavailable. You will need to use JSONP in these situations:

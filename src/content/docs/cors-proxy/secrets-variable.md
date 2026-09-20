@@ -1,6 +1,8 @@
 ---
 title: Secrets Variable
 description: Use secrets variable to store sensitive information when using Corsfix.
+sidebar:
+  order: 9
 ---
 
 The secrets variable feature allows you to store sensitive information, such as API keys or tokens. This is especially useful when you need to make requests that require credentials without exposing them in your frontend code.
@@ -25,6 +27,20 @@ fetch("https://proxy.corsfix.com/?https://domain/?apiKey={{SECRET_NAME}}", {
     Authorization: "Bearer {{SECRET_NAME}}",
   },
 })
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error(error));
+```
+
+Or with the [SDK](/docs/cors-proxy/sdk), where the variables go in the target URL and request headers as usual:
+
+```js
+corsfix
+  .fetch("https://domain/?apiKey={{SECRET_NAME}}", {
+    headers: {
+      Authorization: "Bearer {{SECRET_NAME}}",
+    },
+  })
   .then((response) => response.json())
   .then((data) => console.log(data))
   .catch((error) => console.error(error));

@@ -12,6 +12,7 @@ Corsfix allows you to fix CORS errors on any framework and any tech stack. Find 
 - [Axios](/docs/code-examples/axios)
 - [Fetch](/docs/code-examples/fetch)
 - [Flutter Web](/docs/code-examples/flutter-web)
+- [HTML](/docs/code-examples/html)
 - [jQuery](/docs/code-examples/jquery)
 - [Ky](/docs/code-examples/ky)
 - [React](/docs/code-examples/react)
