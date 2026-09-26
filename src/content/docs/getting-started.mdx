@@ -8,43 +8,18 @@ prev:
 
 import { Aside } from "@astrojs/starlight/components";
 
+The quickest way to use Corsfix is with the [Corsfix SDK](/docs/cors-proxy/sdk). Replace `fetch` with `corsfix.fetch`, and your requests go through the proxy without CORS errors.
+
 <Aside>
-  Make sure to add your domain in the
-  [dashboard](https://app.corsfix.com/applications) to use Corsfix on live
-  websites. <br />
-  For local websites (localhost), you can use Corsfix without any setup.
+  With the SDK, Corsfix works on localhost and on your live website without
+  any setup, within the [free tier](/docs/free-tier) limits. To use a paid
+  plan, add your domain in the
+  [dashboard](https://app.corsfix.com/applications).
 </Aside>
-
-To use Corsfix, add `https://proxy.corsfix.com/?` before your URL when making fetch requests.
-
-```javascript
-// Add Corsfix URL before the API
-// https://proxy.corsfix.com/? + https://api.example.com/data
-
-fetch("https://proxy.corsfix.com/?https://api.example.com/data");
-```
-
-## Basic Usage
-
-```javascript
-// GET request
-fetch("https://proxy.corsfix.com/?https://api.example.com/users")
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-
-// POST request
-fetch("https://proxy.corsfix.com/?https://api.example.com/users", {
-  method: "POST",
-  body: JSON.stringify({ name: "John" }),
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
-```
 
 ## SDK
 
-If you would rather not build the proxy URL yourself, the [Corsfix SDK](/docs/cors-proxy/sdk) wraps `fetch` for you. It works the same way from a script tag or from npm.
+Add the SDK with a script tag:
 
 ```html
 <script src="https://unpkg.com/corsfix"></script>
@@ -56,13 +31,47 @@ If you would rather not build the proxy URL yourself, the [Corsfix SDK](/docs/co
 </script>
 ```
 
+Or install it from npm:
+
+```bash
+npm install corsfix
+```
+
 ```javascript
 import corsfix from "corsfix";
 
 const response = await corsfix.fetch("https://api.example.com/data");
 ```
 
-Using the SDK also lets your live website take advantage of the [free tier](/docs/free-tier).
+`corsfix.fetch` takes the same arguments as `fetch`:
+
+```javascript
+// GET request
+corsfix
+  .fetch("https://api.example.com/users")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+// POST request
+corsfix.fetch("https://api.example.com/users", {
+  method: "POST",
+  body: JSON.stringify({ name: "John" }),
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+```
+
+## Proxy URL
+
+If you would rather not use the SDK, add `https://proxy.corsfix.com/?` before your URL when making fetch requests. On live websites, this requires adding your domain in the [dashboard](https://app.corsfix.com/applications) and a paid plan.
+
+```javascript
+// Add Corsfix URL before the API
+// https://proxy.corsfix.com/? + https://api.example.com/data
+
+fetch("https://proxy.corsfix.com/?https://api.example.com/data");
+```
 
 ## API Key
 
